@@ -1,26 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
     "allowJs": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "module": "commonjs",
+    "target": "es6", // specify which version of JavaScript to compile our TypeScript to
+    "outDir": "./core", // specify where the compiled code will go
+    "watch": false,
+    "declaration": true, // enables automatic generation of ts declaration files
+    "declarationDir": "./core", // specify where the compiled code will go
+    "experimentalDecorators": true
   },
-  "include": [
-    "src"
-  ]
+  "exclude": ["node_modules"] // specify directories to ignore when compiling
 }
