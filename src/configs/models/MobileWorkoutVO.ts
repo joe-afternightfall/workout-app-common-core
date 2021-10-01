@@ -1,4 +1,4 @@
-import { Routine } from '../AppInterfaces';
+import { Routine } from '../interfaces/ActiveWorkout';
 import { MobileWorkoutDAO } from './MobileWorkoutDAO';
 
 export class MobileWorkoutVO extends MobileWorkoutDAO {

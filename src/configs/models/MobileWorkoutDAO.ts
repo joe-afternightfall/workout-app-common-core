@@ -1,4 +1,4 @@
-import { Routine } from '../AppInterfaces';
+import { Routine } from '../interfaces/ActiveWorkout';
 
 export class MobileWorkoutDAO {
   id: string;

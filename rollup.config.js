@@ -1,16 +1,19 @@
 import dts from 'rollup-plugin-dts';
 import pkg from './package.json';
+import typescript from 'rollup-plugin-typescript2';
 
 export default [
   {
-    input: 'core/src/index.js',
+    input: './src/index.ts',
     output: {
       file: pkg.main,
       format: 'cjs',
+      sourcemap: true,
     },
+    plugins: [typescript()],
   },
   {
-    input: 'core/src/index.d.ts',
+    input: 'dist/index.d.ts',
     output: {
       file: 'core/index.d.ts',
     },

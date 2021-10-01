@@ -13,7 +13,7 @@ export type {
   Segment,
   Phase,
   Routine,
-} from './configs/AppInterfaces';
+} from './configs/interfaces/ActiveWorkout';
 
 export { gripTypes } from './configs/workout-types/grip-types';
 export { gripWidths } from './configs/workout-types/grip-widths';
@@ -68,6 +68,9 @@ export { CircuitTemplateVO } from './models/CircuitTemplateVO';
 
 export { UserProfileDAO } from './models/UserProfileDAO';
 export { UserProfileVO } from './models/UserProfileVO';
+
+export type { UserHeight, UserWeight } from './configs/interfaces/UserProfile';
+// export type { UserHeight, UserWeight };
 
 export { WorkoutDAO } from './models/WorkoutDAO';
 export { WorkoutVO } from './models/WorkoutVO';

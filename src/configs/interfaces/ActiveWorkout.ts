@@ -1,4 +1,4 @@
-import { ExerciseVO } from './models/ExerciseVO';
+import { ExerciseVO } from '../models/ExerciseVO';
 
 export interface Routine {
   id: string;
