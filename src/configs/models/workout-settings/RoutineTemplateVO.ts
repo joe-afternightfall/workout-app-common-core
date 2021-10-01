@@ -1,5 +1,5 @@
 import { RoutineTemplateDAO } from './RoutineTemplateDAO';
-import { Phase } from '../interfaces/ActiveWorkout';
+import { Phase } from '../../interfaces/ActiveWorkout';
 
 export class RoutineTemplateVO extends RoutineTemplateDAO {
   firebaseId: string;

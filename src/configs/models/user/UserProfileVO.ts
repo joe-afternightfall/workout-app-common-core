@@ -1,5 +1,5 @@
 import { UserProfileDAO } from './UserProfileDAO';
-import { UserHeight, UserWeight } from '../configs/interfaces/UserProfile';
+import { UserHeight, UserWeight, Workout } from '../../interfaces/UserProfile';
 
 export class UserProfileVO extends UserProfileDAO {
   firebaseId: string;
@@ -13,7 +13,8 @@ export class UserProfileVO extends UserProfileDAO {
     height: UserHeight,
     weights: UserWeight[],
     dateOfBirth: string,
-    lastUpdatedOn: string
+    lastUpdatedOn: string,
+    workouts: Workout[]
   ) {
     super(
       id,
@@ -23,7 +24,8 @@ export class UserProfileVO extends UserProfileDAO {
       height,
       weights,
       dateOfBirth,
-      lastUpdatedOn
+      lastUpdatedOn,
+      workouts
     );
     this.firebaseId = firebaseId;
   }

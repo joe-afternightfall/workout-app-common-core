@@ -1,4 +1,4 @@
-import { UserHeight, UserWeight } from '../configs/interfaces/UserProfile';
+import { UserHeight, UserWeight, Workout } from '../../interfaces/UserProfile';
 
 export class UserProfileDAO {
   id: string;
@@ -9,6 +9,7 @@ export class UserProfileDAO {
   weights: UserWeight[];
   dateOfBirth: string;
   lastUpdatedOn: string;
+  workouts: Workout[];
 
   constructor(
     id: string,
@@ -18,7 +19,8 @@ export class UserProfileDAO {
     height: UserHeight,
     weights: UserWeight[],
     dateOfBirth: string,
-    lastUpdatedOn: string
+    lastUpdatedOn: string,
+    workouts: Workout[]
   ) {
     this.id = id;
     this.email = email;
@@ -28,5 +30,6 @@ export class UserProfileDAO {
     this.height = height;
     this.dateOfBirth = dateOfBirth;
     this.lastUpdatedOn = lastUpdatedOn;
+    this.workouts = workouts;
   }
 }
