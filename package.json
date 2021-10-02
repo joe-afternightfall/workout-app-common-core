@@ -1,7 +1,7 @@
 {
   "name": "workout-app-common-core",
   "author": "After Nightfall Development",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "ISC",
   "description": "common core components for workout app",
   "main": "core/index.js",
@@ -40,7 +40,7 @@
     "fixlint": "eslint './src/**/*.ts' --fix",
     "lint": "eslint './src/**/*.ts'",
     "prepublishOnly": "npm run lint && rm -rf core && rm -rf dist && tsc && rollup -c",
-    "testRoll": "rm -rf core && rm -rf dist && tsc && rollup -c",
+    "testRoll": "npm run lint && rm -rf core && rm -rf dist && tsc && rollup -c",
     "testRollWatch": "rollup -cw"
   },
   "eslintConfig": {
