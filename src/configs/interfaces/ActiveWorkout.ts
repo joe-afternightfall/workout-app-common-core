@@ -54,7 +54,7 @@ export interface WorkoutDuration {
 }
 
 export interface WorkoutDistance {
-  unit: string;
+  unit: 'meters' | 'yards' | 'miles' | 'feet';
   value: number;
 }
 

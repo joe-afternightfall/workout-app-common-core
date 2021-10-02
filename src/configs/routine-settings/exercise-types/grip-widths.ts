@@ -21,4 +21,10 @@ export const gripWidths: GripWidth[] = [
       'A wide grip is a grip that is wider than shoulder width.  Around 6 inches wider than shoulder width.',
     iconId: '',
   },
+  {
+    id: 'e74fcf90-5cb4-49b0-ba03-897cf53361fc',
+    name: 'N/A',
+    description: 'Not applicable',
+    iconId: '',
+  },
 ];

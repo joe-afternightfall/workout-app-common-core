@@ -67,7 +67,7 @@ export const equipmentList: EquipmentVO[] = [
   {
     firebaseId: 'c6adf8c9-8dc0-4ed3-8a20-2702e41bddf6',
     id: '1bde6d1a-825f-4047-a1d4-223642b419d9',
-    name: 'SZ-Bar',
+    name: 'EZ-Bar',
     description: '',
     iconId: '',
   },
