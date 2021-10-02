@@ -1,4 +1,4 @@
-import { ParameterType } from '../interfaces/ActiveWorkout';
+import { ParameterType } from '../../interfaces/ActiveWorkout';
 
 export const parameterTypes: ParameterType[] = [
   {
