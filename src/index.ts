@@ -14,17 +14,20 @@ export type {
   WorkoutDuration,
   WorkoutExercise,
 } from './configs/interfaces/ActiveWorkout';
+
 export type {
   UserHeight,
   UserWeight,
   Workout,
 } from './configs/interfaces/UserProfile';
 
-export { gripTypes } from './configs/workout-types/grip-types';
-export { gripWidths } from './configs/workout-types/grip-widths';
-
-export { parameterTypes } from './configs/workout-types/parameter-types';
-export { trainingSetTypes } from './configs/workout-types/training-set-types';
+export { workoutCategories } from './configs/routine-settings/categories';
+export { equipmentList } from './configs/routine-settings/equipment-list';
+export { phases } from './configs/routine-settings/phases';
+export { gripTypes } from './configs/routine-settings/exercise-types/grip-types';
+export { gripWidths } from './configs/routine-settings/exercise-types/grip-widths';
+export { parameterTypes } from './configs/routine-settings/exercise-types/parameter-types';
+export { trainingSetTypes } from './configs/routine-settings/exercise-types/training-set-types';
 
 export { WorkoutCategoryDAO } from './configs/models/workout-settings/WorkoutCategoryDAO';
 export { WorkoutCategoryVO } from './configs/models/workout-settings/WorkoutCategoryVO';
