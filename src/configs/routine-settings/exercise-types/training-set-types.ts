@@ -32,7 +32,7 @@ export const trainingSetTypes: TrainingSetType[] = [
     iconId: '',
   },
   {
-    id: '3fd3c30c-6c6a-4cfd-8e59-5b500e486374',
+    id: 'a0d9b416-6ca5-4ec9-bba1-5226b660201b',
     name: 'Pyramid',
     description:
       'When you perform pyramid sets, you manipulate the weight used and repetitions performed as you progress through your workout. For example, in set one you do 12 reps with 60 pounds; in set two, you perform 10 reps with 70 pounds; and in set three, you do eight reps with 80 pounds. Pyramid sets allow you to warm up gradually as you increase the intensity of your workout.',
