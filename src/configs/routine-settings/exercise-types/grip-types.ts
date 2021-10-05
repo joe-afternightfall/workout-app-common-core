@@ -22,10 +22,4 @@ export const gripTypes: GripType[] = [
       'Neutral grip is when the palms of you hands are facing each other as you grip the handles.',
     iconId: '',
   },
-  {
-    id: '0634dbcb-eeb6-4486-b72e-5a9ae051edb8',
-    name: 'N/A',
-    description: 'Not applicable',
-    iconId: '',
-  },
 ];

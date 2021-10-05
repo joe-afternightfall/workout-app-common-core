@@ -1,3 +1,12 @@
+export {
+  isStraightSet,
+  isSuperset,
+  isCircuitSet,
+  isDuration,
+  isRepsOnly,
+  isWeightsAndReps,
+} from './utils/workout-info';
+
 export type {
   Set,
   Phase,
@@ -73,5 +82,6 @@ export type {
   SideOfBody,
   MuscleGroup,
   BodySection,
-  muscleGroups,
 } from './models/workout-configurations/MuscleGroups';
+
+export { muscleGroups } from './models/workout-configurations/MuscleGroups';
