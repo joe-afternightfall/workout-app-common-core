@@ -1,9 +1,4 @@
-import {
-  Set,
-  Phase,
-  Segment,
-  WorkoutExercise,
-} from '../../configs/interfaces/ActiveWorkout';
+import { Set, Phase, Segment, WorkoutExercise } from '../../configs';
 
 export const sortEntireRoutine = (phases: Phase[]): Phase[] => {
   const phasesCopy: Phase[] = phases;

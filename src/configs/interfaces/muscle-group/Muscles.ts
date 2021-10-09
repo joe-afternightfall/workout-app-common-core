@@ -1,7 +1,3 @@
-export type SideOfBody = 'front' | 'back' | 'other';
-
-export type BodySection = 'arms' | 'back' | 'legs' | 'core' | 'other';
-
 export type Muscles =
   | 'biceps'
   | 'deltoids'
@@ -19,10 +15,3 @@ export type Muscles =
   | 'quads'
   | 'cardio'
   | 'full-body';
-
-export interface MuscleGroup {
-  id: string;
-  sideOfBody: SideOfBody;
-  bodySection: BodySection;
-  name: Muscles;
-}

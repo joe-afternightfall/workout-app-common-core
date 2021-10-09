@@ -1,4 +1,4 @@
-import { WorkoutCategoryVO } from '../../models/workout-settings/WorkoutCategoryVO';
+import { WorkoutCategoryVO } from '../../models';
 
 export const workoutCategories: WorkoutCategoryVO[] = [
   {

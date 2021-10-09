@@ -1,4 +1,4 @@
-import { GripWidth } from '../../interfaces/ActiveWorkout';
+import { GripWidth } from '../../interfaces';
 
 export const gripWidths: GripWidth[] = [
   {

@@ -1,5 +1,5 @@
 import { UserProfileDAO } from './UserProfileDAO';
-import { UserHeight, UserWeight, Workout } from '../../interfaces/UserProfile';
+import { UserHeight, UserWeight, Workout } from '../../interfaces';
 
 export class UserProfileVO extends UserProfileDAO {
   firebaseId: string;

@@ -1,4 +1,4 @@
-import { TrainingSetType } from '../../interfaces/ActiveWorkout';
+import { TrainingSetType } from '../../interfaces';
 
 export const trainingSetTypes: TrainingSetType[] = [
   {

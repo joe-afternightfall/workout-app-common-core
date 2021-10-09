@@ -1,4 +1,4 @@
-import { MuscleGroup } from '../../interfaces/MuscleGroup';
+import { MuscleGroup } from '../../interfaces';
 
 export const muscleGroups: MuscleGroup[] = [
   // --------- Arms ---------

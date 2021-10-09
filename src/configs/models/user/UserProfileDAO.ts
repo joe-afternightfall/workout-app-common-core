@@ -1,4 +1,4 @@
-import { UserHeight, UserWeight, Workout } from '../../interfaces/UserProfile';
+import { UserHeight, UserWeight, Workout } from '../../interfaces';
 
 export class UserProfileDAO {
   id: string;

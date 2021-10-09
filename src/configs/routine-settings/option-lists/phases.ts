@@ -1,4 +1,4 @@
-import { PhaseVO } from '../../models/workout-settings/PhaseVO';
+import { PhaseVO } from '../../models';
 
 export const phases: PhaseVO[] = [
   {

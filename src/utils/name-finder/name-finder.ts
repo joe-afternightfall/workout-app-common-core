@@ -1,7 +1,9 @@
-import { trainingSetTypes } from '../../configs/routine-settings';
-import { TrainingSetType } from '../../configs/interfaces/ActiveWorkout';
-import { parameterTypes } from '../../configs/routine-settings';
-import { ExerciseVO } from '../../configs/models/workout-settings/ExerciseVO';
+import {
+  ExerciseVO,
+  parameterTypes,
+  trainingSetTypes,
+  TrainingSetType,
+} from '../../configs';
 
 export const getExerciseName = (
   allExercises: ExerciseVO[],

@@ -1,4 +1,4 @@
-import { EquipmentVO } from '../../models/workout-settings/EquipmentVO';
+import { EquipmentVO } from '../../models';
 
 export const equipmentList: EquipmentVO[] = [
   {

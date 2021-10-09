@@ -1,4 +1,4 @@
-import { Phase } from '../../interfaces/ActiveWorkout';
+import { Phase } from '../../interfaces';
 
 export class RoutineTemplateDAO {
   id: string;

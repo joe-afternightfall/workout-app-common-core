@@ -1,4 +1,4 @@
-import { GripType } from '../../interfaces/ActiveWorkout';
+import { GripType } from '../../interfaces';
 
 export const gripTypes: GripType[] = [
   {
