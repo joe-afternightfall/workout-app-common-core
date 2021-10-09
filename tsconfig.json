@@ -12,11 +12,8 @@
      "outDir": "./dist", // specify where the compiled code will go
     "watch": false,
     "declaration": true, // enables automatic generation of ts declaration files
-//    "declarationDir": "./core", // specify where the compiled code will go
-//    "experimentalDecorators": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
-//    "noEmit": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
