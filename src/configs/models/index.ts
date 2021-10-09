@@ -1,28 +1,13 @@
-import {EquipmentDAO} from "./workout-settings/EquipmentDAO";
-import {EquipmentVO} from "./workout-settings/EquipmentVO";
-import {ExerciseDAO} from "./workout-settings/ExerciseDAO";
-import {ExerciseVO} from "./workout-settings/ExerciseVO";
-import {PhaseDAO} from "./workout-settings/PhaseDAO";
-import {PhaseVO} from "./workout-settings/PhaseVO";
-import {RoutineTemplateDAO} from "./workout-settings/RoutineTemplateDAO";
-import {WorkoutCategoryDAO} from "./workout-settings/WorkoutCategoryDAO";
-import {WorkoutCategoryVO} from "./workout-settings/WorkoutCategoryVO";
+export { UserProfileDAO } from './user/UserProfileDAO';
+export { UserProfileVO } from './user/UserProfileVO';
 
-EquipmentDAO
-
-EquipmentVO
-
-ExerciseDAO
-
-ExerciseVO
-
-PhaseDAO
-
-PhaseVO
-
-RoutineTemplateDAO
-
-RoutineTemplateDAO
-WorkoutCategoryDAO
-
-WorkoutCategoryVO
+export { EquipmentDAO } from './workout-settings/EquipmentDAO';
+export { EquipmentVO } from './workout-settings/EquipmentVO';
+export { ExerciseDAO } from './workout-settings/ExerciseDAO';
+export { ExerciseVO } from './workout-settings/ExerciseVO';
+export { PhaseDAO } from './workout-settings/PhaseDAO';
+export { PhaseVO } from './workout-settings/PhaseVO';
+export { RoutineTemplateDAO } from './workout-settings/RoutineTemplateDAO';
+export { RoutineTemplateVO } from './workout-settings/RoutineTemplateVO';
+export { WorkoutCategoryDAO } from './workout-settings/WorkoutCategoryDAO';
+export { WorkoutCategoryVO } from './workout-settings/WorkoutCategoryVO';
