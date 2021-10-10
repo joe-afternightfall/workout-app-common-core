@@ -1,2 +1,2 @@
-import Blinker from './Blinker';
-export { Blinker };
+import NightfallBlinker from './NightfallBlinker';
+export { NightfallBlinker };

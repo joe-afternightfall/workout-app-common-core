@@ -3,6 +3,7 @@ import {
   parameterTypes,
   trainingSetTypes,
   TrainingSetType,
+  phases,
 } from '../../configs';
 
 export const getExerciseName = (
@@ -28,4 +29,10 @@ export const getSetTypeName = (id: string): string | undefined => {
   );
 
   return foundType && foundType.name;
+};
+
+export const getPhaseName = (id: string): string | undefined => {
+  const foundPhase = phases.find((phase) => phase.id === id);
+
+  return foundPhase && foundPhase.name;
 };

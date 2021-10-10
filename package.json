@@ -1,7 +1,7 @@
 {
   "name": "workout-app-common-core",
   "author": "After Nightfall Development",
-  "version": "0.0.27",
+  "version": "0.0.31",
   "license": "ISC",
   "description": "common core components for workout app",
   "main": "core/index.js",
@@ -11,6 +11,7 @@
   "types": "core/index.d.ts",
   "dependencies": {
     "@material-ui/core": "4.11.4",
+    "@material-ui/icons": "4.11.2",
     "clsx": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

@@ -26,17 +26,18 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const Blinker = (props: BlinkerProps): JSX.Element => {
+export default function NightfallBlinker({
+  shouldBlink,
+  component,
+}: NightfallBlinkerProps): JSX.Element {
   const { flicker, withAnimation } = useStyles({
-    shouldBlink: props.shouldBlink,
+    shouldBlink: shouldBlink,
   });
 
-  return <div className={clsx(flicker, withAnimation)}>{props.component}</div>;
-};
+  return <div className={clsx(flicker, withAnimation)}>{component}</div>;
+}
 
-interface BlinkerProps {
+interface NightfallBlinkerProps {
   shouldBlink: boolean;
   component: JSX.Element;
 }
-
-export default Blinker;
