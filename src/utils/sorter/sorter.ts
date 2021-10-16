@@ -23,3 +23,15 @@ export const sortEntireRoutine = (phases: Phase[]): Phase[] => {
 
   return phasesCopy;
 };
+
+export const sortSegmentExercises = (
+  exercises: WorkoutExercise[]
+): WorkoutExercise[] => {
+  return exercises.sort(
+    (a: WorkoutExercise, b: WorkoutExercise) => a.order - b.order
+  );
+};
+
+export const sortPhaseSegments = (segments: Segment[]): Segment[] => {
+  return segments.sort((a: Segment, b: Segment) => a.order - b.order);
+};
