@@ -1,7 +1,7 @@
 {
   "name": "workout-app-common-core",
   "author": "After Nightfall Development",
-  "version": "0.0.40",
+  "version": "0.0.42",
   "license": "ISC",
   "description": "common core components for workout app",
   "main": "core/index.js",
