@@ -9,9 +9,10 @@ export class RoutineTemplateVO extends RoutineTemplateDAO {
     name: string,
     workoutCategoryId: string,
     phases: Phase[],
-    firebaseId: string
+    firebaseId: string,
+    active: boolean
   ) {
-    super(id, name, workoutCategoryId, phases);
+    super(id, name, workoutCategoryId, phases, active);
     this.firebaseId = firebaseId;
   }
 }
