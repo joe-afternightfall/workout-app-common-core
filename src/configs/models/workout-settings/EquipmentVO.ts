@@ -8,9 +8,10 @@ export class EquipmentVO extends EquipmentDAO {
     id: string,
     name: string,
     description: string,
-    iconId: string
+    iconId: string,
+    active: boolean
   ) {
-    super(id, name, description, iconId);
+    super(id, name, description, iconId, active);
     this.firebaseId = firebaseId;
   }
 }
