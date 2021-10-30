@@ -8,9 +8,10 @@ export class WorkoutCategoryVO extends WorkoutCategoryDAO {
     id: string,
     name: string,
     color: string,
-    muscleGroupIds: string[]
+    manikinMuscleGroupIds: string[],
+    active: boolean
   ) {
-    super(id, name, color, muscleGroupIds);
+    super(id, name, color, manikinMuscleGroupIds, active);
     this.firebaseId = firebaseId;
   }
 }
