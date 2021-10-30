@@ -7,9 +7,10 @@ export class PhaseVO extends PhaseDAO {
     firebaseId: string,
     id: string,
     name: string,
-    description: string
+    description: string,
+    active: boolean
   ) {
-    super(id, name, description);
+    super(id, name, description, active);
     this.firebaseId = firebaseId;
   }
 }
