@@ -1,4 +1,4 @@
-export class EquipmentDAO {
+export class WorkoutEquipmentDAO {
   id: string;
   name: string;
   description: string;

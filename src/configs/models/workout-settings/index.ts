@@ -1,4 +1,3 @@
-export * from './equipment';
 export * from './exercise';
 export * from './grip-type';
 export * from './grip-width';
@@ -10,3 +9,4 @@ export * from './phase';
 export * from './routine-template';
 export * from './training-set-type';
 export * from './workout-category';
+export * from './workout-equipment';

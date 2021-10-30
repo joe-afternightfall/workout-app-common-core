@@ -1,12 +1,12 @@
-import { EquipmentDAO, EquipmentVO } from '../../../configs';
+import { WorkoutEquipmentDAO, WorkoutEquipmentVO } from '../../../configs';
 
-export interface EquipmentSnapshot {
-  [key: string]: EquipmentDAO;
+export interface WorkoutEquipmentSnapshot {
+  [key: string]: WorkoutEquipmentDAO;
 }
 
-export const mapEquipmentSnapshotToVo = (
-  snapshot: EquipmentSnapshot
-): EquipmentVO[] => {
+export const mapWorkoutEquipmentSnapshotToVo = (
+  snapshot: WorkoutEquipmentSnapshot
+): WorkoutEquipmentVO[] => {
   return Object.keys(snapshot).map((key: string) => {
     return {
       firebaseId: key,

@@ -1,6 +1,6 @@
-import { EquipmentDAO } from './EquipmentDAO';
+import { WorkoutEquipmentDAO } from './WorkoutEquipmentDAO';
 
-export class EquipmentVO extends EquipmentDAO {
+export class WorkoutEquipmentVO extends WorkoutEquipmentDAO {
   firebaseId: string;
 
   constructor(

@@ -1,6 +1,6 @@
 import firebase from 'firebase';
-import { mapExerciseSnapshotToVO } from '../../utils';
-import { ExerciseVO, FIREBASE_DB_EXERCISES_ROUTE } from '../../configs';
+import { mapExerciseSnapshotToVO } from '../../../utils';
+import { ExerciseVO, FIREBASE_DB_EXERCISES_ROUTE } from '../../../configs';
 
 export const getAllExercises = async (): Promise<ExerciseVO[]> => {
   return await firebase

@@ -1,4 +1,4 @@
-export * from './equipment';
+export * from './workout-equipment';
 export * from './exercise';
 export * from './grip-type';
 export * from './grip-width';

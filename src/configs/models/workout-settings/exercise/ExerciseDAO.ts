@@ -7,7 +7,7 @@ export class ExerciseDAO {
   id: string;
   name: string;
   description: string;
-  equipmentIds: string[];
+  workoutEquipmentIds: string[];
   manikinMuscleGroupIds: string[];
   musclesWorked: MusclesWorked;
   iconId: string;
@@ -21,7 +21,7 @@ export class ExerciseDAO {
     id: string,
     name: string,
     description: string,
-    equipmentIds: string[],
+    workoutEquipmentIds: string[],
     manikinMuscleGroupIds: string[],
     musclesWorked: MusclesWorked,
     iconId: string,
@@ -34,7 +34,7 @@ export class ExerciseDAO {
     this.id = id;
     this.name = name;
     this.description = description;
-    this.equipmentIds = equipmentIds;
+    this.workoutEquipmentIds = workoutEquipmentIds;
     this.manikinMuscleGroupIds = manikinMuscleGroupIds;
     this.musclesWorked = musclesWorked;
     this.iconId = iconId;

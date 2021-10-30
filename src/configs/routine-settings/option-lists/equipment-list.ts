@@ -1,6 +1,6 @@
-import { EquipmentVO } from '../../models';
+import { WorkoutEquipmentVO } from '../../models';
 
-export const equipmentList: EquipmentVO[] = [];
+export const equipmentList: WorkoutEquipmentVO[] = [];
 
 // todo: rip out
 // {

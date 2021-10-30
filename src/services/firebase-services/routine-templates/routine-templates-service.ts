@@ -2,8 +2,8 @@ import firebase from 'firebase';
 import {
   RoutineTemplateVO,
   FIREBASE_DB_ROUTINE_TEMPLATES_ROUTE,
-} from '../../configs';
-import { mapRoutineTemplateSnapshotToVO } from '../../utils';
+} from '../../../configs';
+import { mapRoutineTemplateSnapshotToVO } from '../../../utils';
 
 export const getAllRoutineTemplates = async (): Promise<
   RoutineTemplateVO[]

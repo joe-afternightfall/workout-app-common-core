@@ -13,7 +13,7 @@ export const mapExerciseSnapshotToVO = (
       id: snapshot[key].id,
       name: snapshot[key].name,
       description: snapshot[key].description,
-      equipmentIds: snapshot[key].equipmentIds,
+      workoutEquipmentIds: snapshot[key].workoutEquipmentIds,
       manikinMuscleGroupIds: snapshot[key].manikinMuscleGroupIds,
       musclesWorked: snapshot[key].musclesWorked,
       iconId: snapshot[key].iconId,
