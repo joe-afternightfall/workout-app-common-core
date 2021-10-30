@@ -1,4 +1,4 @@
-import { ExerciseDAO } from './ExerciseDAO';
+import { ExerciseDAO, MusclesWorked } from './ExerciseDAO';
 
 export class ExerciseVO extends ExerciseDAO {
   firebaseId: string;
@@ -8,25 +8,29 @@ export class ExerciseVO extends ExerciseDAO {
     id: string,
     name: string,
     description: string,
-    equipmentId: string,
-    muscleGroupIds: string[],
+    equipmentIds: string[],
+    manikinMuscleGroupIds: string[],
+    musclesWorked: MusclesWorked,
     iconId: string,
     gripTypeId: string,
     gripWidthId: string,
     parameterTypeId: string,
-    alternateSides: boolean
+    alternateSides: boolean,
+    active: boolean
   ) {
     super(
       id,
       name,
       description,
-      equipmentId,
-      muscleGroupIds,
+      equipmentIds,
+      manikinMuscleGroupIds,
+      musclesWorked,
       iconId,
       gripTypeId,
       gripWidthId,
       parameterTypeId,
-      alternateSides
+      alternateSides,
+      active
     );
     this.firebaseId = firebaseId;
   }

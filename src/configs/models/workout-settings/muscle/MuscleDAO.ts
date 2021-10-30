@@ -1,4 +1,4 @@
-export class MuscleWorkedDAO {
+export class MuscleDAO {
   id: string;
   name: string;
   manikinMuscleGroupId: string;

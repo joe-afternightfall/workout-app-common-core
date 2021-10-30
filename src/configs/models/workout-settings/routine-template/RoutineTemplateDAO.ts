@@ -1,4 +1,4 @@
-import { Phase } from '../../interfaces';
+import { Phase } from '../../../interfaces';
 
 export class RoutineTemplateDAO {
   id: string;

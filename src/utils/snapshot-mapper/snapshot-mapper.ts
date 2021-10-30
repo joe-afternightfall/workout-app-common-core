@@ -18,13 +18,15 @@ export const mapExerciseSnapshotToVO = (
       id: snapshot[key].id,
       name: snapshot[key].name,
       description: snapshot[key].description,
-      equipmentId: snapshot[key].equipmentId,
-      muscleGroupIds: snapshot[key].muscleGroupIds,
+      equipmentIds: snapshot[key].equipmentIds,
+      manikinMuscleGroupIds: snapshot[key].manikinMuscleGroupIds,
+      musclesWorked: snapshot[key].musclesWorked,
       iconId: snapshot[key].iconId,
       gripTypeId: snapshot[key].gripTypeId,
       gripWidthId: snapshot[key].gripWidthId,
       parameterTypeId: snapshot[key].parameterTypeId,
       alternateSides: snapshot[key].alternateSides,
+      active: snapshot[key].active,
     };
   });
 };
@@ -42,6 +44,7 @@ export const mapRoutineSnapshotToVO = (
       name: snapshot[key].name,
       workoutCategoryId: snapshot[key].workoutCategoryId,
       phases: snapshot[key].phases,
+      active: snapshot[key].active,
     };
   });
 };

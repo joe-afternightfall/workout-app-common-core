@@ -1,38 +1,44 @@
 import {
+  PhaseVO,
   ExerciseVO,
-  parameterTypes,
-  trainingSetTypes,
-  TrainingSetType,
-  phases,
+  ParameterTypeVO,
+  TrainingSetTypeVO,
 } from '../../configs';
 
 export const getExerciseName = (
   allExercises: ExerciseVO[],
   id: string
-): string => {
+): string | undefined => {
   const foundExercise = allExercises.find(
     (exercise: ExerciseVO) => exercise.id === id
   );
 
-  return foundExercise ? foundExercise.name : '';
+  return foundExercise && foundExercise.name;
 };
 
-export const getParameterTypeName = (id: string): string | undefined => {
-  const foundType = parameterTypes.find((type) => type.id === id);
+export const getParameterTypeName = (
+  allParamTypes: ParameterTypeVO[],
+  id: string
+): string | undefined => {
+  const foundType = allParamTypes.find((type) => type.id === id);
 
   return foundType && foundType.name;
 };
 
-export const getSetTypeName = (id: string): string | undefined => {
-  const foundType = trainingSetTypes.find(
-    (set: TrainingSetType) => set.id === id
-  );
+export const getSetTypeName = (
+  allSetTypes: TrainingSetTypeVO[],
+  id: string
+): string | undefined => {
+  const foundType = allSetTypes.find((set: TrainingSetTypeVO) => set.id === id);
 
   return foundType && foundType.name;
 };
 
-export const getPhaseName = (id: string): string | undefined => {
-  const foundPhase = phases.find((phase) => phase.id === id);
+export const getPhaseName = (
+  allPhases: PhaseVO[],
+  id: string
+): string | undefined => {
+  const foundPhase = allPhases.find((phase: PhaseVO) => phase.id === id);
 
   return foundPhase && foundPhase.name;
 };

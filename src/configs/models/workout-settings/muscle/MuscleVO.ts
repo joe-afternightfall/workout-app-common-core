@@ -1,6 +1,6 @@
-import { MuscleWorkedDAO } from './MuscleWorkedDAO';
+import { MuscleDAO } from './MuscleDAO';
 
-export class MuscleWorkedVO extends MuscleWorkedDAO {
+export class MuscleVO extends MuscleDAO {
   firebaseId: string;
 
   constructor(
