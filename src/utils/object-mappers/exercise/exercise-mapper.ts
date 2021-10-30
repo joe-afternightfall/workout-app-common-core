@@ -1,9 +1,4 @@
-import {
-  ExerciseDAO,
-  ExerciseVO,
-  RoutineTemplateDAO,
-  RoutineTemplateVO,
-} from '../../configs';
+import { ExerciseDAO, ExerciseVO } from '../../../configs';
 
 export interface ExerciseSnapshot {
   [key: string]: ExerciseDAO;
@@ -26,24 +21,6 @@ export const mapExerciseSnapshotToVO = (
       gripWidthId: snapshot[key].gripWidthId,
       parameterTypeId: snapshot[key].parameterTypeId,
       alternateSides: snapshot[key].alternateSides,
-      active: snapshot[key].active,
-    };
-  });
-};
-
-export interface RoutineSnapshot {
-  [key: string]: RoutineTemplateDAO;
-}
-export const mapRoutineSnapshotToVO = (
-  snapshot: RoutineSnapshot
-): RoutineTemplateVO[] => {
-  return Object.keys(snapshot).map((key: string): RoutineTemplateVO => {
-    return {
-      firebaseId: key,
-      id: snapshot[key].id,
-      name: snapshot[key].name,
-      workoutCategoryId: snapshot[key].workoutCategoryId,
-      phases: snapshot[key].phases,
       active: snapshot[key].active,
     };
   });
