@@ -17,12 +17,12 @@ const useStyles = makeStyles(() =>
   })
 );
 
-export default function CountdownTimer({
+export default function NightfallCountdownTimer({
   timers,
   nextStepHandler,
   closeHandler,
   resetStepperHandler,
-}: CountdownTimerProps): JSX.Element {
+}: NightfallCountdownTimerProps): JSX.Element {
   const classes = useStyles();
   const [counter, setCounter] = useState(0);
   const [circleTimerKey, setCircleTimerKey] = useState(0);
@@ -123,7 +123,7 @@ export default function CountdownTimer({
   );
 }
 
-export interface CountdownTimerProps {
+export interface NightfallCountdownTimerProps {
   timers: WorkoutTimer[];
   closeHandler: () => void;
   nextStepHandler: () => void;

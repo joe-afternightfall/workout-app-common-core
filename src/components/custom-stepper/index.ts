@@ -1,3 +1,3 @@
-import CustomStepper from './CustomStepper';
+import NightfallStepper from './CustomStepper';
 
-export { CustomStepper };
+export { NightfallStepper };

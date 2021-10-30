@@ -15,10 +15,10 @@ const useStyles = makeStyles(() =>
   })
 );
 
-export default function CustomStepper({
+export default function NightfallStepper({
   activeStep,
   timers,
-}: CustomStepperProps): JSX.Element {
+}: NightfallStepperProps): JSX.Element {
   const classes = useStyles();
 
   return (
@@ -40,7 +40,7 @@ export default function CustomStepper({
   );
 }
 
-export interface CustomStepperProps {
+export interface NightfallStepperProps {
   timers: WorkoutTimer[];
   activeStep: number;
 }

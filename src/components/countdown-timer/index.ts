@@ -1,3 +1,3 @@
-import CountdownTimer from './CountdownTimer';
+import NightfallCountdownTimer from './CountdownTimer';
 
-export { CountdownTimer };
+export { NightfallCountdownTimer };
