@@ -38,205 +38,172 @@ import {
   getAllDeActivatedWorkoutEquipment,
 } from '../../services';
 
-export const findActiveExercise = async (
-  id: string
+export const findExercise = async (
+  id: string,
+  active: boolean
 ): Promise<ParameterTypeVO | undefined> => {
-  const activeExercises = await getAllActiveExercises();
-  return activeExercises.find((exercise: ExerciseVO) => exercise.id === id);
+  let exercises;
+  if (active) {
+    exercises = await getAllActiveExercises();
+  } else {
+    exercises = await getAllDeActivatedExercises();
+  }
+  return exercises.find((exercise: ExerciseVO) => exercise.id === id);
 };
 
-export const findDeActivatedExercise = async (
-  id: string
-): Promise<ParameterTypeVO | undefined> => {
-  const deActivatedExercises = await getAllDeActivatedExercises();
-  return deActivatedExercises.find(
-    (exercise: ExerciseVO) => exercise.id === id
-  );
-};
-
-export const findActiveGripType = async (
-  id: string
+export const findGripType = async (
+  id: string,
+  active: boolean
 ): Promise<GripTypeVO | undefined> => {
-  const activeGripTypes = await getAllActiveGripTypes();
-  return activeGripTypes.find((gripType: GripTypeVO) => gripType.id === id);
+  let gripTypes;
+  if (active) {
+    gripTypes = await getAllActiveGripTypes();
+  } else {
+    gripTypes = await getAllDeActivatedGripTypes();
+  }
+  return gripTypes.find((gripType: GripTypeVO) => gripType.id === id);
 };
 
-export const findDeActivatedGripType = async (
-  id: string
-): Promise<GripTypeVO | undefined> => {
-  const deActivatedGripTypes = await getAllDeActivatedGripTypes();
-  return deActivatedGripTypes.find(
-    (gripType: GripTypeVO) => gripType.id === id
-  );
-};
-
-export const findActiveGripWidth = async (
-  id: string
+export const findGripWidth = async (
+  id: string,
+  active: boolean
 ): Promise<GripWidthVO | undefined> => {
-  const activeGripWidths = await getAllActiveGripWidths();
-  return activeGripWidths.find((gripWidth: GripWidthVO) => gripWidth.id === id);
+  let gripWidths;
+  if (active) {
+    gripWidths = await getAllActiveGripWidths();
+  } else {
+    gripWidths = await getAllDeActivatedGripWidths();
+  }
+  return gripWidths.find((gripWidth: GripWidthVO) => gripWidth.id === id);
 };
 
-export const findDeActivatedGripWidth = async (
-  id: string
-): Promise<GripWidthVO | undefined> => {
-  const deActivatedGripWidths = await getAllDeActivatedGripWidths();
-  return deActivatedGripWidths.find(
-    (gripWidth: GripWidthVO) => gripWidth.id === id
-  );
-};
-
-export const findActiveManikinMuscleGroup = async (
-  id: string
+export const findManikinMuscleGroup = async (
+  id: string,
+  active: boolean
 ): Promise<ManikinMuscleGroupVO | undefined> => {
-  const activeManikinMuscleGroups = await getAllActiveManikinMuscleGroups();
-  return activeManikinMuscleGroups.find(
+  let manikinMuscleGroups;
+  if (active) {
+    manikinMuscleGroups = await getAllActiveManikinMuscleGroups();
+  } else {
+    manikinMuscleGroups = await getAllActiveManikinMuscleGroups();
+  }
+  return manikinMuscleGroups.find(
     (manikinMuscleGroup: ManikinMuscleGroupVO) => manikinMuscleGroup.id === id
   );
 };
 
-export const findDeActivatedManikinMuscleGroup = async (
-  id: string
-): Promise<ManikinMuscleGroupVO | undefined> => {
-  const activeManikinMuscleGroups = await getAllActiveManikinMuscleGroups();
-  return activeManikinMuscleGroups.find(
-    (manikinMuscleGroup: ManikinMuscleGroupVO) => manikinMuscleGroup.id === id
-  );
-};
-
-export const findActiveMuscleTargetType = async (
-  id: string
+export const findMuscleTargetType = async (
+  id: string,
+  active: boolean
 ): Promise<MuscleTargetTypeVO | undefined> => {
-  const activeMuscleTypes = await getAllActiveMuscleTargetTypes();
-  return activeMuscleTypes.find(
+  let muscleTargetTypes;
+  if (active) {
+    muscleTargetTypes = await getAllActiveMuscleTargetTypes();
+  } else {
+    muscleTargetTypes = await getAllDeActivatedMuscleTargetTypes();
+  }
+  return muscleTargetTypes.find(
     (muscleTargetType: MuscleTargetTypeVO) => muscleTargetType.id === id
   );
 };
 
-export const findDeActivatedMuscleTargetType = async (
-  id: string
-): Promise<MuscleTargetTypeVO | undefined> => {
-  const deActivatedMuscleTypes = await getAllDeActivatedMuscleTargetTypes();
-  return deActivatedMuscleTypes.find(
-    (muscleTargetType: MuscleTargetTypeVO) => muscleTargetType.id === id
-  );
-};
-
-export const findActiveMuscle = async (
-  id: string
+export const findMuscle = async (
+  id: string,
+  active: boolean
 ): Promise<MuscleVO | undefined> => {
-  const activeMuscles = await getAllActiveMuscles();
-  return activeMuscles.find((muscle: MuscleVO) => muscle.id === id);
+  let muscles;
+  if (active) {
+    muscles = await getAllActiveMuscles();
+  } else {
+    muscles = await getAllDeActivatedMuscles();
+  }
+  return muscles.find((muscle: MuscleVO) => muscle.id === id);
 };
 
-export const findDeActivatedMuscle = async (
-  id: string
-): Promise<MuscleVO | undefined> => {
-  const deActivatedMuscles = await getAllDeActivatedMuscles();
-  return deActivatedMuscles.find((muscle: MuscleVO) => muscle.id === id);
-};
-
-export const findActiveParameterType = async (
-  id: string
+export const findParameterType = async (
+  id: string,
+  active: boolean
 ): Promise<ParameterTypeVO | undefined> => {
-  const activeParameterTypes = await getAllActiveParameterTypes();
-  return activeParameterTypes.find(
+  let parameterTypes;
+  if (active) {
+    parameterTypes = await getAllActiveParameterTypes();
+  } else {
+    parameterTypes = await getAllDeActivatedParameterTypes();
+  }
+  return parameterTypes.find(
     (parameterType: ParameterTypeVO) => parameterType.id === id
   );
 };
 
-export const findDeActivatedParameterType = async (
-  id: string
-): Promise<ParameterTypeVO | undefined> => {
-  const deActivatedParameterTypes = await getAllDeActivatedParameterTypes();
-  return deActivatedParameterTypes.find(
-    (parameterType: ParameterTypeVO) => parameterType.id === id
-  );
-};
-
-export const findActivePhase = async (
-  id: string
+export const findPhase = async (
+  id: string,
+  active: boolean
 ): Promise<PhaseVO | undefined> => {
-  const activePhases = await getAllActivePhases();
-  return activePhases.find((phase: PhaseVO) => phase.id === id);
+  let phases;
+  if (active) {
+    phases = await getAllActivePhases();
+  } else {
+    phases = await getAllDeActivatedPhases();
+  }
+  return phases.find((phase: PhaseVO) => phase.id === id);
 };
 
-export const findDeActivatedPhase = async (
-  id: string
-): Promise<PhaseVO | undefined> => {
-  const deActivatedPhases = await getAllDeActivatedPhases();
-  return deActivatedPhases.find((phase: PhaseVO) => phase.id === id);
-};
-
-export const findActiveRoutineTemplate = async (
-  id: string
+export const findRoutineTemplate = async (
+  id: string,
+  active: boolean
 ): Promise<RoutineTemplateVO | undefined> => {
-  const activeRoutineTemplates = await getAllActiveRoutineTemplates();
-  return activeRoutineTemplates.find(
+  let routineTemplates;
+  if (active) {
+    routineTemplates = await getAllActiveRoutineTemplates();
+  } else {
+    routineTemplates = await getAllDeActivatedRoutineTemplates();
+  }
+  return routineTemplates.find(
     (routineTemplate: RoutineTemplateVO) => routineTemplate.id === id
   );
 };
 
-export const findDeActivatedRoutineTemplate = async (
-  id: string
-): Promise<RoutineTemplateVO | undefined> => {
-  const deActivatedRoutineTemplates = await getAllDeActivatedRoutineTemplates();
-  return deActivatedRoutineTemplates.find(
-    (routineTemplate: RoutineTemplateVO) => routineTemplate.id === id
-  );
-};
-
-export const findActiveTrainingSetType = async (
-  id: string
+export const findTrainingSetType = async (
+  id: string,
+  active: boolean
 ): Promise<TrainingSetTypeVO | undefined> => {
-  const activeTrainingSetTypes = await getAllActiveTrainingSetTypes();
-  return activeTrainingSetTypes.find(
+  let trainingSetTypes;
+  if (active) {
+    trainingSetTypes = await getAllActiveTrainingSetTypes();
+  } else {
+    trainingSetTypes = await getAllDeActivatedTrainingSetTypes();
+  }
+  return trainingSetTypes.find(
     (trainingSetType: TrainingSetTypeVO) => trainingSetType.id === id
   );
 };
 
-export const findDeActivatedTrainingSetType = async (
-  id: string
-): Promise<TrainingSetTypeVO | undefined> => {
-  const deActivatedTrainingSetTypes = await getAllDeActivatedTrainingSetTypes();
-  return deActivatedTrainingSetTypes.find(
-    (trainingSetType: TrainingSetTypeVO) => trainingSetType.id === id
-  );
-};
-
-export const findActiveWorkoutCategory = async (
-  id: string
+export const findWorkoutCategory = async (
+  id: string,
+  active: boolean
 ): Promise<WorkoutCategoryVO | undefined> => {
-  const activeWorkoutCategories = await getAllActiveWorkoutCategories();
-  return activeWorkoutCategories.find(
+  let workoutCategories;
+  if (active) {
+    workoutCategories = await getAllActiveWorkoutCategories();
+  } else {
+    workoutCategories = await getAllDeActivatedWorkoutCategories();
+  }
+  return workoutCategories.find(
     (workoutCategory: WorkoutCategoryVO) => workoutCategory.id === id
   );
 };
 
-export const findDeActivatedWorkoutCategory = async (
-  id: string
-): Promise<WorkoutCategoryVO | undefined> => {
-  const deActivatedWorkoutCategories =
-    await getAllDeActivatedWorkoutCategories();
-  return deActivatedWorkoutCategories.find(
-    (workoutCategory: WorkoutCategoryVO) => workoutCategory.id === id
-  );
-};
-
-export const findActiveWorkoutEquipment = async (
-  id: string
+export const findWorkoutEquipment = async (
+  id: string,
+  active: boolean
 ): Promise<WorkoutEquipmentVO | undefined> => {
-  const activeWorkoutEquipment = await getAllActiveWorkoutEquipment();
-  return activeWorkoutEquipment.find(
-    (workoutEquipment: WorkoutEquipmentVO) => workoutEquipment.id === id
-  );
-};
-
-export const findDeActivatedWorkoutEquipment = async (
-  id: string
-): Promise<WorkoutEquipmentVO | undefined> => {
-  const deActivatedWorkoutEquipment = await getAllDeActivatedWorkoutEquipment();
-  return deActivatedWorkoutEquipment.find(
+  let workoutEquipment;
+  if (active) {
+    workoutEquipment = await getAllActiveWorkoutEquipment();
+  } else {
+    workoutEquipment = await getAllDeActivatedWorkoutEquipment();
+  }
+  return workoutEquipment.find(
     (workoutEquipment: WorkoutEquipmentVO) => workoutEquipment.id === id
   );
 };
