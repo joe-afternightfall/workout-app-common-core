@@ -1,10 +1,4 @@
 import {
-  PhaseVO,
-  ExerciseVO,
-  ParameterTypeVO,
-  TrainingSetTypeVO,
-} from '../../configs';
-import {
   findExercise,
   findGripType,
   findManikinMuscleGroup,

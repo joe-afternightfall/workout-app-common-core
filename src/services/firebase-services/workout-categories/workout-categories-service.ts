@@ -1,7 +1,6 @@
 import {
   WorkoutCategoryVO,
   FIREBASE_DB_WORKOUT_CATEGORIES_ROUTE,
-  Workout,
 } from '../../../configs';
 import firebase from 'firebase';
 import { mapWorkoutCategorySnapshotToVO } from '../../../utils';

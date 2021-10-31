@@ -1,7 +1,6 @@
 import {
-  FIREBASE_DB_WORKOUT_EQUIPMENT_ROUTE,
-  Workout,
   WorkoutEquipmentVO,
+  FIREBASE_DB_WORKOUT_EQUIPMENT_ROUTE,
 } from '../../../configs';
 import firebase from 'firebase';
 import { mapWorkoutEquipmentSnapshotToVo } from '../../../utils';
