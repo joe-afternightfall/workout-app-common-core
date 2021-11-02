@@ -12,98 +12,98 @@ import {
   findWorkoutEquipment,
 } from '../object-finder';
 
-export const getExerciseName = async (
+export const getExerciseName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundExercise = await findExercise(id, active);
+): string | undefined => {
+  const foundExercise = findExercise(id, active);
   return foundExercise && foundExercise.name;
 };
 
-export const getGripTypeName = async (
+export const getGripTypeName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundGripType = await findGripType(id, active);
+): string | undefined => {
+  const foundGripType = findGripType(id, active);
   return foundGripType && foundGripType.name;
 };
 
-export const getGripWidthName = async (
+export const getGripWidthName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundGripType = await findGripType(id, active);
+): string | undefined => {
+  const foundGripType = findGripType(id, active);
   return foundGripType && foundGripType.name;
 };
 
-export const getManikinMuscleGroupName = async (
+export const getManikinMuscleGroupName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundManikinMuscleGroup = await findManikinMuscleGroup(id, active);
+): string | undefined => {
+  const foundManikinMuscleGroup = findManikinMuscleGroup(id, active);
   return foundManikinMuscleGroup && foundManikinMuscleGroup.name;
 };
 
-export const getMuscleTargetTypeName = async (
+export const getMuscleTargetTypeName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundMuscleTargetType = await findMuscleTargetType(id, active);
+): string | undefined => {
+  const foundMuscleTargetType = findMuscleTargetType(id, active);
   return foundMuscleTargetType && foundMuscleTargetType.name;
 };
 
-export const getMuscleName = async (
+export const getMuscleName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundMuscle = await findMuscle(id, active);
+): string | undefined => {
+  const foundMuscle = findMuscle(id, active);
   return foundMuscle && foundMuscle.name;
 };
 
-export const getParameterTypeName = async (
+export const getParameterTypeName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundParameterType = await findParameterType(id, active);
+): string | undefined => {
+  const foundParameterType = findParameterType(id, active);
   return foundParameterType && foundParameterType.name;
 };
 
-export const getPhaseName = async (
+export const getPhaseName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundPhase = await findPhase(id, active);
+): string | undefined => {
+  const foundPhase = findPhase(id, active);
   return foundPhase && foundPhase.name;
 };
 
-export const getRoutineTemplateName = async (
+export const getRoutineTemplateName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundRoutineTemplate = await findRoutineTemplate(id, active);
+): string | undefined => {
+  const foundRoutineTemplate = findRoutineTemplate(id, active);
   return foundRoutineTemplate && foundRoutineTemplate.name;
 };
 
-export const getTrainingSetTypeName = async (
+export const getTrainingSetTypeName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundTrainingSetType = await findTrainingSetType(id, active);
+): string | undefined => {
+  const foundTrainingSetType = findTrainingSetType(id, active);
   return foundTrainingSetType && foundTrainingSetType.name;
 };
 
-export const getWorkoutCategoryName = async (
+export const getWorkoutCategoryName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundWorkoutCategory = await findWorkoutCategory(id, active);
+): string | undefined => {
+  const foundWorkoutCategory = findWorkoutCategory(id, active);
   return foundWorkoutCategory && foundWorkoutCategory.name;
 };
 
-export const getWorkoutEquipmentName = async (
+export const getWorkoutEquipmentName = (
   id: string,
   active: boolean
-): Promise<string | undefined> => {
-  const foundWorkoutEquipment = await findWorkoutEquipment(id, active);
+): string | undefined => {
+  const foundWorkoutEquipment = findWorkoutEquipment(id, active);
   return foundWorkoutEquipment && foundWorkoutEquipment.name;
 };

@@ -38,172 +38,251 @@ import {
   getAllDeActivatedWorkoutEquipment,
 } from '../../services';
 
-export const findExercise = async (
+export const findExercise = (
   id: string,
   active: boolean
-): Promise<ParameterTypeVO | undefined> => {
-  let exercises;
+): ExerciseVO | undefined => {
+  let promise;
+  let foundExercise;
   if (active) {
-    exercises = await getAllActiveExercises();
+    promise = getAllActiveExercises();
   } else {
-    exercises = await getAllDeActivatedExercises();
+    promise = getAllDeActivatedExercises();
   }
-  return exercises.find((exercise: ExerciseVO) => exercise.id === id);
+  promise.then((exercises: ExerciseVO[]) => {
+    exercises.find((exercise: ExerciseVO) => {
+      if (exercise.id === id) {
+        foundExercise = exercise;
+      }
+    });
+  });
+  return foundExercise;
 };
 
-export const findGripType = async (
+export const findGripType = (
   id: string,
   active: boolean
-): Promise<GripTypeVO | undefined> => {
-  let gripTypes;
+): GripTypeVO | undefined => {
+  let promise;
+  let foundGripType;
   if (active) {
-    gripTypes = await getAllActiveGripTypes();
+    promise = getAllActiveGripTypes();
   } else {
-    gripTypes = await getAllDeActivatedGripTypes();
+    promise = getAllDeActivatedGripTypes();
   }
-  return gripTypes.find((gripType: GripTypeVO) => gripType.id === id);
+  promise.then((gripTypes: GripTypeVO[]) => {
+    gripTypes.find((gripType: GripTypeVO) => {
+      if (gripType.id === id) {
+        foundGripType = gripType;
+      }
+    });
+  });
+  return foundGripType;
 };
 
-export const findGripWidth = async (
+export const findGripWidth = (
   id: string,
   active: boolean
-): Promise<GripWidthVO | undefined> => {
-  let gripWidths;
+): GripWidthVO | undefined => {
+  let promise;
+  let foundGripWidth;
   if (active) {
-    gripWidths = await getAllActiveGripWidths();
+    promise = getAllActiveGripWidths();
   } else {
-    gripWidths = await getAllDeActivatedGripWidths();
+    promise = getAllDeActivatedGripWidths();
   }
-  return gripWidths.find((gripWidth: GripWidthVO) => gripWidth.id === id);
+  promise.then((gripWidths: GripWidthVO[]) => {
+    gripWidths.find((gripWidth: GripWidthVO) => {
+      if (gripWidth.id === id) {
+        foundGripWidth = gripWidth;
+      }
+    });
+  });
+  return foundGripWidth;
 };
 
-export const findManikinMuscleGroup = async (
+export const findManikinMuscleGroup = (
   id: string,
   active: boolean
-): Promise<ManikinMuscleGroupVO | undefined> => {
-  let manikinMuscleGroups;
+): ManikinMuscleGroupVO | undefined => {
+  let promise;
+  let foundManikinMuscleGroup;
   if (active) {
-    manikinMuscleGroups = await getAllActiveManikinMuscleGroups();
+    promise = getAllActiveManikinMuscleGroups();
   } else {
-    manikinMuscleGroups = await getAllActiveManikinMuscleGroups();
+    promise = getAllActiveManikinMuscleGroups();
   }
-  return manikinMuscleGroups.find(
-    (manikinMuscleGroup: ManikinMuscleGroupVO) => manikinMuscleGroup.id === id
-  );
+  promise.then((manikinMuscleGroups: ManikinMuscleGroupVO[]) => {
+    manikinMuscleGroups.find((manikinMuscleGroup: ManikinMuscleGroupVO) => {
+      if (manikinMuscleGroup.id === id) {
+        foundManikinMuscleGroup = manikinMuscleGroup;
+      }
+    });
+  });
+  return foundManikinMuscleGroup;
 };
 
-export const findMuscleTargetType = async (
+export const findMuscleTargetType = (
   id: string,
   active: boolean
-): Promise<MuscleTargetTypeVO | undefined> => {
-  let muscleTargetTypes;
+): MuscleTargetTypeVO | undefined => {
+  let promise;
+  let foundMuscleTargetType;
   if (active) {
-    muscleTargetTypes = await getAllActiveMuscleTargetTypes();
+    promise = getAllActiveMuscleTargetTypes();
   } else {
-    muscleTargetTypes = await getAllDeActivatedMuscleTargetTypes();
+    promise = getAllDeActivatedMuscleTargetTypes();
   }
-  return muscleTargetTypes.find(
-    (muscleTargetType: MuscleTargetTypeVO) => muscleTargetType.id === id
-  );
+  promise.then((muscleTargetTypes: MuscleTargetTypeVO[]) => {
+    muscleTargetTypes.find((muscleTargetType: MuscleTargetTypeVO) => {
+      if (muscleTargetType.id === id) {
+        foundMuscleTargetType = muscleTargetType;
+      }
+    });
+  });
+  return foundMuscleTargetType;
 };
 
-export const findMuscle = async (
+export const findMuscle = (
   id: string,
   active: boolean
-): Promise<MuscleVO | undefined> => {
-  let muscles;
+): MuscleVO | undefined => {
+  let promise;
+  let foundMuscle;
   if (active) {
-    muscles = await getAllActiveMuscles();
+    promise = getAllActiveMuscles();
   } else {
-    muscles = await getAllDeActivatedMuscles();
+    promise = getAllDeActivatedMuscles();
   }
-  return muscles.find((muscle: MuscleVO) => muscle.id === id);
+  promise.then((muscles) => {
+    muscles.find((muscle: MuscleVO) => {
+      if (muscle.id === id) {
+        foundMuscle = muscle;
+      }
+    });
+  });
+  return foundMuscle;
 };
 
-export const findParameterType = async (
+export const findParameterType = (
   id: string,
   active: boolean
-): Promise<ParameterTypeVO | undefined> => {
-  let parameterTypes;
+): ParameterTypeVO | undefined => {
+  let promise;
+  let parameterTypeToReturn;
   if (active) {
-    parameterTypes = await getAllActiveParameterTypes();
+    promise = getAllActiveParameterTypes();
   } else {
-    parameterTypes = await getAllDeActivatedParameterTypes();
+    promise = getAllDeActivatedParameterTypes();
   }
-  return parameterTypes.find(
-    (parameterType: ParameterTypeVO) => parameterType.id === id
-  );
+  promise.then((parameterTypes: ParameterTypeVO[]) => {
+    parameterTypes.find((parameterType: ParameterTypeVO) => {
+      if (parameterType.id === id) {
+        parameterTypeToReturn = parameterType;
+      }
+    });
+  });
+  return parameterTypeToReturn;
 };
 
-export const findPhase = async (
-  id: string,
-  active: boolean
-): Promise<PhaseVO | undefined> => {
-  let phases;
+export const findPhase = (id: string, active: boolean): PhaseVO | undefined => {
+  let promise;
+  let foundPhase;
   if (active) {
-    phases = await getAllActivePhases();
+    promise = getAllActivePhases();
   } else {
-    phases = await getAllDeActivatedPhases();
+    promise = getAllDeActivatedPhases();
   }
-  return phases.find((phase: PhaseVO) => phase.id === id);
+  promise.then((phases: PhaseVO[]) => {
+    phases.find((phase: PhaseVO) => {
+      if (phase.id === id) {
+        foundPhase = phase;
+      }
+    });
+  });
+  return foundPhase;
 };
 
-export const findRoutineTemplate = async (
+export const findRoutineTemplate = (
   id: string,
   active: boolean
-): Promise<RoutineTemplateVO | undefined> => {
-  let routineTemplates;
+): RoutineTemplateVO | undefined => {
+  let promise;
+  let foundRoutineTemplate;
   if (active) {
-    routineTemplates = await getAllActiveRoutineTemplates();
+    promise = getAllActiveRoutineTemplates();
   } else {
-    routineTemplates = await getAllDeActivatedRoutineTemplates();
+    promise = getAllDeActivatedRoutineTemplates();
   }
-  return routineTemplates.find(
-    (routineTemplate: RoutineTemplateVO) => routineTemplate.id === id
-  );
+  promise.then((routineTemplates: RoutineTemplateVO[]) => {
+    routineTemplates.find((routineTemplate: RoutineTemplateVO) => {
+      if (routineTemplate.id === id) {
+        foundRoutineTemplate = routineTemplate;
+      }
+    });
+  });
+  return foundRoutineTemplate;
 };
 
-export const findTrainingSetType = async (
+export const findTrainingSetType = (
   id: string,
   active: boolean
-): Promise<TrainingSetTypeVO | undefined> => {
-  let trainingSetTypes;
+): TrainingSetTypeVO | undefined => {
+  let promise;
+  let foundTrainingSetType;
   if (active) {
-    trainingSetTypes = await getAllActiveTrainingSetTypes();
+    promise = getAllActiveTrainingSetTypes();
   } else {
-    trainingSetTypes = await getAllDeActivatedTrainingSetTypes();
+    promise = getAllDeActivatedTrainingSetTypes();
   }
-  return trainingSetTypes.find(
-    (trainingSetType: TrainingSetTypeVO) => trainingSetType.id === id
-  );
+  promise.then((trainingSetTypes: TrainingSetTypeVO[]) => {
+    trainingSetTypes.find((trainingSetType: TrainingSetTypeVO) => {
+      if (trainingSetType.id === id) {
+        foundTrainingSetType = trainingSetType;
+      }
+    });
+  });
+  return foundTrainingSetType;
 };
 
-export const findWorkoutCategory = async (
+export const findWorkoutCategory = (
   id: string,
   active: boolean
-): Promise<WorkoutCategoryVO | undefined> => {
-  let workoutCategories;
+): WorkoutCategoryVO | undefined => {
+  let promise;
+  let foundWorkoutCategory;
   if (active) {
-    workoutCategories = await getAllActiveWorkoutCategories();
+    promise = getAllActiveWorkoutCategories();
   } else {
-    workoutCategories = await getAllDeActivatedWorkoutCategories();
+    promise = getAllDeActivatedWorkoutCategories();
   }
-  return workoutCategories.find(
-    (workoutCategory: WorkoutCategoryVO) => workoutCategory.id === id
-  );
+  promise.then((workoutCategories: WorkoutCategoryVO[]) => {
+    workoutCategories.find((workoutCategory: WorkoutCategoryVO) => {
+      if (workoutCategory.id === id) {
+        foundWorkoutCategory = workoutCategory;
+      }
+    });
+  });
+  return foundWorkoutCategory;
 };
 
-export const findWorkoutEquipment = async (
+export const findWorkoutEquipment = (
   id: string,
   active: boolean
-): Promise<WorkoutEquipmentVO | undefined> => {
-  let workoutEquipment;
+): WorkoutEquipmentVO | undefined => {
+  let promise;
+  let foundWorkoutEquipment;
   if (active) {
-    workoutEquipment = await getAllActiveWorkoutEquipment();
+    promise = getAllActiveWorkoutEquipment();
   } else {
-    workoutEquipment = await getAllDeActivatedWorkoutEquipment();
+    promise = getAllDeActivatedWorkoutEquipment();
   }
-  return workoutEquipment.find(
-    (workoutEquipment: WorkoutEquipmentVO) => workoutEquipment.id === id
-  );
+  promise.then((workoutEquipment: WorkoutEquipmentVO[]) => {
+    workoutEquipment.find((workoutEquipment: WorkoutEquipmentVO) => {
+      if (workoutEquipment.id === id) {
+        foundWorkoutEquipment = workoutEquipment;
+      }
+    });
+  });
+  return foundWorkoutEquipment;
 };
