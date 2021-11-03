@@ -20,3 +20,8 @@ export type {
   BuiltSets,
   ActiveSetInfo,
 } from './exercise-settings/ActiveSetInfo';
+
+export type {
+  MuscleInfo,
+  MusclesWorked,
+} from './exercise-settings/MusclesWorked';

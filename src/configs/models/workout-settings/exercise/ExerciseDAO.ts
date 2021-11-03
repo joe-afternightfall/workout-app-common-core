@@ -1,7 +1,4 @@
-export interface MusclesWorked {
-  primary: { muscleTargetTypeId: string; muscleId: string }[];
-  secondary: { muscleTargetTypeId: string; muscleId: string }[];
-}
+import { MusclesWorked } from '../../../interfaces';
 
 export class ExerciseDAO {
   id: string;

@@ -1,4 +1,5 @@
-import { ExerciseDAO, MusclesWorked } from './ExerciseDAO';
+import { ExerciseDAO } from './ExerciseDAO';
+import { MusclesWorked } from '../../../interfaces';
 
 export class ExerciseVO extends ExerciseDAO {
   firebaseId: string;
