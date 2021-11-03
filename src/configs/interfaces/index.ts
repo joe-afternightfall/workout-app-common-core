@@ -20,7 +20,8 @@ export type {
   BuiltSets,
   ActiveSetInfo,
 } from './exercise-settings/ActiveSetInfo';
-export type { GripType } from './exercise-settings/GripType';
-export type { GripWidth } from './exercise-settings/GripWidth';
-export type { ParameterType } from './exercise-settings/ParameterType';
-export type { TrainingSetType } from './exercise-settings/TrainingSetType';
+
+export type {
+  MuscleInfo,
+  MusclesWorked,
+} from './exercise-settings/MusclesWorked';

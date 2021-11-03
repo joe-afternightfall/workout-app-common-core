@@ -1,2 +1,1 @@
-export * from './routine-templates';
-export * from './exercises';
+export * from './firebase-services';

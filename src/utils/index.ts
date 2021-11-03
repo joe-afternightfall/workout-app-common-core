@@ -1,5 +1,4 @@
-export * from './name-finder';
+export * from './object-mappers';
 export * from './sorter';
-export * from './workout-info';
 export * from './validator';
-export * from './snapshot-mapper';
+export * from './workout-info';
