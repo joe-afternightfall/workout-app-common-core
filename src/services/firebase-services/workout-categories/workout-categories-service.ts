@@ -2,7 +2,8 @@ import {
   WorkoutCategoryVO,
   FIREBASE_DB_WORKOUT_CATEGORIES_ROUTE,
 } from '../../../configs';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { mapWorkoutCategorySnapshotToVO } from '../../../utils';
 
 export const getAllWorkoutCategories = async (): Promise<

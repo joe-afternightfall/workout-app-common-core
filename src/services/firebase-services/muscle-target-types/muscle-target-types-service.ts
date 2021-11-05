@@ -2,7 +2,8 @@ import {
   MuscleTargetTypeVO,
   FIREBASE_DB_MUSCLE_TARGET_TYPES_ROUTE,
 } from '../../../configs';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { mapMuscleTargetTypeSnapshotToVO } from '../../../utils';
 
 export const getAllMuscleTargetTypes = async (): Promise<

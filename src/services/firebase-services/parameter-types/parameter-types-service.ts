@@ -2,7 +2,8 @@ import {
   ParameterTypeVO,
   FIREBASE_DB_PARAMETER_TYPES_ROUTE,
 } from '../../../configs';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { mapParameterTypeSnapshotToVO } from '../../../utils';
 
 export const getAllParameterTypes = async (): Promise<ParameterTypeVO[]> => {

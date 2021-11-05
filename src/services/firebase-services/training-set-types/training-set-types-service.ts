@@ -2,7 +2,8 @@ import {
   TrainingSetTypeVO,
   FIREBASE_DB_TRAINING_SET_TYPES_ROUTE,
 } from '../../../configs';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { mapTrainingSetTypeSnapshotToVO } from '../../../utils';
 
 export const getAllTrainingSetTypes = async (): Promise<

@@ -1,4 +1,5 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { mapGripTypeSnapshotToVO } from '../../../utils';
 import { GripTypeVO, FIREBASE_DB_GRIP_TYPES_ROUTE } from '../../../configs';
 

@@ -1,4 +1,5 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { FIREBASE_DB_PHASES_ROUTE, PhaseVO } from '../../../configs';
 import { mapPhaseSnapshotToVO } from '../../../utils';
 
