@@ -1,5 +1,6 @@
 import { ExerciseDAO } from './ExerciseDAO';
 import { MusclesWorked } from '../../../interfaces';
+import { ExtraInfo } from '../../../interfaces/exercise-settings/ExtraInfo';
 
 export class ExerciseVO extends ExerciseDAO {
   firebaseId: string;
@@ -8,7 +9,9 @@ export class ExerciseVO extends ExerciseDAO {
     firebaseId: string,
     id: string,
     name: string,
+    // todo: depricate description
     description: string,
+    extraInfo: ExtraInfo[],
     workoutEquipmentIds: string[],
     manikinMuscleGroupIds: string[],
     musclesWorked: MusclesWorked,
@@ -23,6 +26,7 @@ export class ExerciseVO extends ExerciseDAO {
       id,
       name,
       description,
+      extraInfo,
       workoutEquipmentIds,
       manikinMuscleGroupIds,
       musclesWorked,

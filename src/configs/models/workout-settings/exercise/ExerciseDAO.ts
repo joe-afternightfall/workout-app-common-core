@@ -1,4 +1,5 @@
 import { MusclesWorked } from '../../../interfaces';
+import { ExtraInfo } from '../../../interfaces/exercise-settings/ExtraInfo';
 
 export class ExerciseDAO {
   id: string;
@@ -13,11 +14,13 @@ export class ExerciseDAO {
   parameterTypeId: string;
   alternateSides: boolean;
   active: boolean;
+  extraInfo: ExtraInfo[];
 
   constructor(
     id: string,
     name: string,
     description: string,
+    extraInfo: ExtraInfo[],
     workoutEquipmentIds: string[],
     manikinMuscleGroupIds: string[],
     musclesWorked: MusclesWorked,
@@ -31,6 +34,7 @@ export class ExerciseDAO {
     this.id = id;
     this.name = name;
     this.description = description;
+    this.extraInfo = extraInfo;
     this.workoutEquipmentIds = workoutEquipmentIds;
     this.manikinMuscleGroupIds = manikinMuscleGroupIds;
     this.musclesWorked = musclesWorked;
