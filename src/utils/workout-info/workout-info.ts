@@ -39,6 +39,10 @@ export const isDuration = (id: string): boolean => {
   return id === '2dfbe410-5d1c-4449-a3e9-b29f6ebec693';
 };
 
+export const isDistance = (id: string): boolean => {
+  return id === 'ac093c87-a428-4dd2-b095-cbdcf2e06a18';
+};
+
 export interface SetInfo {
   setNumber: number;
   weight: number;

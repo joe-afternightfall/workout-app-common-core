@@ -1,6 +1,5 @@
 import { WorkoutDuration } from './WorkoutDuration';
 import { WorkoutDistance } from './WorkoutDistance';
-import { WorkoutTimer } from './WorkoutTimer';
 
 export interface Set {
   id: string;
@@ -9,6 +8,5 @@ export interface Set {
   reps: number;
   duration?: WorkoutDuration;
   distance?: WorkoutDistance;
-  timers?: WorkoutTimer[];
   markedDone: boolean;
 }
