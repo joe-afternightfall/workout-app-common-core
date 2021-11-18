@@ -15,8 +15,8 @@ export interface ActiveSetInfo {
   exerciseOrder: number;
   weight: number;
   reps: number;
-  duration?: WorkoutDuration;
-  distance?: WorkoutDistance;
+  duration: WorkoutDuration;
+  distance: WorkoutDistance;
   timers?: WorkoutTimer[];
   markedDone: boolean;
 }

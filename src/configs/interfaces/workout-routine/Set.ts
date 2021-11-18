@@ -6,7 +6,7 @@ export interface Set {
   setNumber: number;
   weight: number;
   reps: number;
-  duration?: WorkoutDuration;
-  distance?: WorkoutDistance;
+  duration: WorkoutDuration;
+  distance: WorkoutDistance;
   markedDone: boolean;
 }
